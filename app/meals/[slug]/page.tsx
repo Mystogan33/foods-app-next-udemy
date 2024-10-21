@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
@@ -10,6 +11,21 @@ type TMealDetailsPageProps = {
     slug: string;
   };
 };
+
+export async function generateMetadata({
+  params,
+}: TMealDetailsPageProps): Promise<Metadata> {
+  const meal = getMeal(params?.slug);
+
+  if (!meal) {
+    notFound();
+  }
+
+  return {
+    title: `NextLevel Food - ${meal?.title}`,
+    description: meal?.summary,
+  };
+}
 
 export default function MealDetailsPage({ params }: TMealDetailsPageProps) {
   const meal = getMeal(params?.slug);

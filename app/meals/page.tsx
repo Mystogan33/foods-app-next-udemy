@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { Metadata } from "next";
 import Link from "next/link";
 
 import { getMeals } from "@/lib/meals";
@@ -6,6 +7,11 @@ import { getMeals } from "@/lib/meals";
 import MealsGrid from "@/components/meals/mealsGrid/meals-grid";
 
 import classes from "./page.module.scss";
+
+export const metadata: Metadata = {
+  title: "NextLevel Food - All meals",
+  description: "Browse the delicious meals shared by our vibrant community.",
+};
 
 async function Meals() {
   const meals = await getMeals();

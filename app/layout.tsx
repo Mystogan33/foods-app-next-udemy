@@ -1,8 +1,10 @@
 import MainHeader from "@/components/main-header/main-header";
-import "./globals.css";
+import { Metadata } from "next";
 
-export const metadata = {
-  title: "NextLevel Food",
+import "./globals.scss";
+
+export const metadata: Metadata = {
+  title: "NextLevel Food - Homepage",
   description: "Delicious meals, shared by a food-loving community.",
 };
 

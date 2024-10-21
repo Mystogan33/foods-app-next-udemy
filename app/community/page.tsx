@@ -1,9 +1,17 @@
+import { Metadata } from "next";
 import Image from "next/image";
 
 import mealIcon from "@/assets/icons/meal.png";
 import communityIcon from "@/assets/icons/community.png";
 import eventsIcon from "@/assets/icons/events.png";
-import classes from "./page.module.css";
+
+import classes from "./page.module.scss";
+
+export const metadata: Metadata = {
+  title: "NextLevel Food - Community",
+  description:
+    "One shared passion: Food. Join our community and share your favorite recipes!",
+};
 
 export default function CommunityPage() {
   return (
