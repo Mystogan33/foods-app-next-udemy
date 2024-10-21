@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { TGetMeal } from "@/lib/types";
 
-import classes from "./meal-item.module.css";
+import classes from "./meal-item.module.scss";
 
 export default function MealItem({
   title,

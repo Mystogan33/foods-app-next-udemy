@@ -1,6 +1,6 @@
-import classes from "./page.module.css";
-
 import ShareMealPageMain from "@/components/meals/shareMealPageMain/share-meal-page-main";
+
+import classes from "./page.module.scss";
 
 const ShareMealPageHeader = () => (
   <header className={classes.header}>

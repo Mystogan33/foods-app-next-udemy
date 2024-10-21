@@ -1,10 +1,10 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { ChangeEvent, useRef, useState } from "react";
 
 import ImagePreview from "../imagePreview/image-preview";
 
-import classes from "./image-picker.module.css";
+import classes from "./image-picker.module.scss";
 
 type TImagePickerProps = {
   label: string;
@@ -13,11 +13,13 @@ type TImagePickerProps = {
 
 export default function ImagePicker({ label, name }: TImagePickerProps) {
   const inputRef = useRef(null);
-  const [pickedImage, setPickedImage] = useState(null);
+  const [pickedImage, setPickedImage] = useState<null | string>(null);
+
+  console.log(pickedImage);
 
   const pickImageHandler = () => inputRef?.current?.click();
 
-  const handleImageChange = (event) => {
+  const handleImageChange = (event: ChangeEvent<HTMLInputElement>) => {
     const file = event?.target?.files?.[0];
 
     if (!file) {
@@ -27,7 +29,7 @@ export default function ImagePicker({ label, name }: TImagePickerProps) {
 
     const fileReader = new FileReader();
 
-    fileReader.onload = () => setPickedImage(fileReader?.result);
+    fileReader.onload = () => setPickedImage(fileReader?.result as string);
 
     fileReader.readAsDataURL(file);
   };

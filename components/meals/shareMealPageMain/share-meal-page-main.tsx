@@ -8,7 +8,7 @@ import FormInput from "../formInput/formInput";
 import ImagePicker from "../imagePicker/image-picker";
 import MealsFormSubmit from "../meals-form-submit/meals-form-submit";
 
-import classes from "./share-meal-page-main.module.css";
+import classes from "./share-meal-page-main.module.scss";
 
 export default function ShareMealPageMain() {
   const [state, formAction] = useFormState(shareMeal, { message: null });

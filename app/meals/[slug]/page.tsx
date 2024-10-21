@@ -1,14 +1,15 @@
 import Image from "next/image";
-import classes from "./page.module.css";
-import { getMeal } from "@/lib/meals";
 import { notFound } from "next/navigation";
-import { FC } from "react";
+
+import { getMeal } from "@/lib/meals";
+
+import classes from "./page.module.scss";
 
 type TMealDetailsPageProps = {
   params: {
     slug: string;
-  }
-}
+  };
+};
 
 export default function MealDetailsPage({ params }: TMealDetailsPageProps) {
   const meal = getMeal(params?.slug);

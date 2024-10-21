@@ -8,13 +8,13 @@
   text-align: center;
   color: #a4abb9;
   position: relative;
-}
 
-.preview p {
-  margin: 0;
-  padding: 1rem;
-}
+  p {
+    margin: 0;
+    padding: 1rem;
+  }
 
-.preview img {
-  object-fit: cover;
+  img {
+    object-fit: cover;
+  }
 }

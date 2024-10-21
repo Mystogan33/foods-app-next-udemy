@@ -1,5 +1,6 @@
 import { InputHTMLAttributes } from "react";
-import classes from "./formInput.module.css";
+
+import classes from "./formInput.module.scss";
 
 type TFormInputProps = {
   name: string;

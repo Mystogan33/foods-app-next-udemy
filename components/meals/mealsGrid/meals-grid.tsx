@@ -1,7 +1,7 @@
 import { TGetMeal } from "@/lib/types";
 import MealItem from "../mealItem/meal-item";
 
-import classes from "./meals-grid.module.css";
+import classes from "./meals-grid.module.scss";
 
 type TMealsGridProps = {
   meals: Array<TGetMeal>;

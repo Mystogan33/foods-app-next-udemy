@@ -1,7 +1,8 @@
 import Link from "next/link";
 
-import classes from "./page.module.css";
 import ImageSlideshow from "@/components/images/image-slideshow";
+
+import classes from "./page.module.scss";
 
 const HomeHeader = () => (
   <header className={classes.header}>

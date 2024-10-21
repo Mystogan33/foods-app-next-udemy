@@ -3,9 +3,10 @@ import Link from "next/link";
 
 import logoImg from "@/assets/images/logo.png";
 
-import classes from "./main-header.module.css";
 import MainHeaderBackground from "./main-header-background/main-header-background";
 import NavLink from "./nav-link/nav-link";
+
+import classes from "./main-header.module.scss";
 
 export default function MainHeader() {
   return (

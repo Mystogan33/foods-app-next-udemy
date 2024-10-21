@@ -1,11 +1,9 @@
 import Image from "next/image";
 
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-
-import classes from "./image-preview.module.css";
+import classes from "./image-preview.module.scss";
 
 type TImagePreviewProps = {
-  pickedImage: string | StaticImport;
+  pickedImage: string;
 };
 
 export default function ImagePreview({ pickedImage }: TImagePreviewProps) {
